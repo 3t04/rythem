@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://blwppgew1ns5a"]
+
+[ext_resource type="BoxMesh" uid="uid://c1hqevvs3afhw" path="res://Game/Asset/Normal_Notes/Normal_Notes_Mesh.tres" id="1_2cnbj"]
+
+[node name="Normal_Notes" type="Node3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = ExtResource("1_2cnbj")

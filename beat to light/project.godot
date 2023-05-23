@@ -11,5 +11,14 @@ config_version=5
 [application]
 
 config/name="beat to light"
+run/main_scene="res://Game/Game.tscn"
 config/features=PackedStringArray("4.0", "Forward Plus")
 config/icon="res://icon.svg"
+
+[dotnet]
+
+project/assembly_name="beat to light"
+
+[rendering]
+
+renderer/rendering_method="gl_compatibility"

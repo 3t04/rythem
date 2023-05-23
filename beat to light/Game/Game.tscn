@@ -1,0 +1,25 @@
+[gd_scene load_steps=5 format=3 uid="uid://ds7qso5vfty3v"]
+
+[ext_resource type="Script" path="res://Game/GameScene.gd" id="1_5tq53"]
+[ext_resource type="Script" path="res://Game/GameNode3D.gd" id="2_0xg13"]
+[ext_resource type="BoxMesh" uid="uid://cnm8curmipgll" path="res://Game/Asset/PlayGround/PlayGround.tres" id="2_612se"]
+[ext_resource type="Material" uid="uid://ck2jtper4kki7" path="res://Game/Asset/PlayGround/PlayGround_Color.tres" id="2_a0htj"]
+
+[node name="Game" type="Node"]
+script = ExtResource("1_5tq53")
+
+[node name="GameNode3D" type="Node3D" parent="."]
+script = ExtResource("2_0xg13")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="GameNode3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.08165e-12, 2.08165e-12, -10)
+material_override = ExtResource("2_a0htj")
+mesh = ExtResource("2_612se")
+
+[node name="Camera3D" type="Camera3D" parent="GameNode3D"]
+transform = Transform3D(1, -6.15973e-16, 2.24196e-16, 2.24196e-16, 0.642788, 0.766044, -6.15973e-16, -0.766044, 0.642788, 2.08165e-12, 7, 2.08165e-12)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="GameNode3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.3783, -209.449)
+
+[node name="MusicPlayer" type="AudioStreamPlayer" parent="."]
